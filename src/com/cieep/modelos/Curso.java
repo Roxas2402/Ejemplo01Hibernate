@@ -1,4 +1,4 @@
-package com.cieep;
+package com.cieep.modelos;
 
 import java.io.Serializable;
 
