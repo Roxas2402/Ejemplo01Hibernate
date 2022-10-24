@@ -11,5 +11,7 @@
         <property name="connection.password">root</property>
         <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
         <property name="show_sql">true</property>
+
+        <mapping resource="com/cieep/modelos/mapping/alumno.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>

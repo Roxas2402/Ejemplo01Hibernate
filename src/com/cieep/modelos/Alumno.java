@@ -1,10 +1,15 @@
 package com.cieep.modelos;
 
-public class Alumno {
+import java.io.Serializable;
+
+public class Alumno implements Serializable {
     private int id;
     private String nombre;
     private String apellidos;
     private String dni;
+
+    public Alumno() {
+    }
 
     public Alumno(String nombre, String apellidos, String dni) {
         this.nombre = nombre;
