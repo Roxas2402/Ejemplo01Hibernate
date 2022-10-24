@@ -11,6 +11,16 @@ public class Alumno implements Serializable {
     public Alumno() {
     }
 
+    @Override
+    public String toString() {
+        return "Alumno{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", apellidos='" + apellidos + '\'' +
+                ", dni='" + dni + '\'' +
+                '}';
+    }
+
     public Alumno(String nombre, String apellidos, String dni) {
         this.nombre = nombre;
         this.apellidos = apellidos;
