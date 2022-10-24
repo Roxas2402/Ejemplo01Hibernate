@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 
 import java.io.Serializable;
 
+//LOS @ EXTRAÑOS SON PARA LA SEGUNDA FORMA DEL CRUD
 @Entity
 @Table(name = "alumnos")
 
