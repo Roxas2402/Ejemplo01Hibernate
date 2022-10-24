@@ -1,11 +1,20 @@
 package com.cieep.modelos;
 
+import jakarta.persistence.*;
+
 import java.io.Serializable;
 
+@Entity
+@Table(name = "alumnos")
+
 public class Alumno implements Serializable {
+    @Id
     private int id;
+    @Column(name = "nombre")
     private String nombre;
+    @Column
     private String apellidos;
+    @Column
     private String dni;
 
     public Alumno() {

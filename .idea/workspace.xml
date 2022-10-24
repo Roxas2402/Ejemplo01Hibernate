@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d5a5075-16cf-44c6-9513-712bafc72f9b" name="Changes" comment="aa">
-      <change beforePath="$PROJECT_DIR$/src/com/cieep/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/cieep/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/cieep/modelos/Alumno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/cieep/modelos/Alumno.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +81,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1666631222627</updated>
-      <workItem from="1666631224291" duration="3525000" />
+      <workItem from="1666631224291" duration="4554000" />
     </task>
     <task id="LOCAL-00001" summary="aa">
       <created>1666631536211</created>
@@ -118,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666634406288</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="aa">
+      <created>1666636176572</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1666636176572</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
