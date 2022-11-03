@@ -5,11 +5,14 @@ import jakarta.persistence.*;
 import java.io.Serializable;
 
 //LOS @ EXTRAÑOS SON PARA LA SEGUNDA FORMA DEL CRUD
+
+
 @Entity
 @Table(name = "alumnos")
 
 public class Alumno implements Serializable {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     @Column(name = "nombre")
     private String nombre;
@@ -17,6 +20,32 @@ public class Alumno implements Serializable {
     private String apellidos;
     @Column
     private String dni;
+
+    @ManyToOne
+    @JoinColumn(name = "id_curso")
+    private Curso curso;
+
+    public Curso getCurso() {
+        return curso;
+    }
+
+    public void setCurso(Curso curso) {
+        this.curso = curso;
+    }
+
+    public Equipo getEquipo() {
+        return equipo;
+    }
+
+    public void setEquipo(Equipo equipo) {
+        this.equipo = equipo;
+    }
+
+    //La relación 1 - 1 se marca como relación OneToOne || Aquí estamos haciendo la relación con equipo
+    @OneToOne(fetch = FetchType.LAZY)
+    //Aquí hay que crear getters y setters
+    @JoinColumn(name = "id_equipo")
+    private Equipo equipo;
 
     public Alumno() {
     }

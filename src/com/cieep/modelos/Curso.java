@@ -1,11 +1,35 @@
 package com.cieep.modelos;
 
-import java.io.Serializable;
+import jakarta.persistence.*;
 
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+@Entity
+@Table (name = "cursos")
 public class Curso implements Serializable {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String nombre, descripcion;
+    @Column
+    private String nombre;
+    @Column
+    private String descripcion;
+    @Column
     private char grupo;
+
+
+    public List<Alumno> getAlumnos() {
+        return alumnos;
+    }
+
+    public void setAlumnos(List<Alumno> alumnos) {
+        this.alumnos = alumnos;
+    }
+    @OneToMany(mappedBy = "curso", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Alumno> alumnos;
 
     @Override
     public String toString() {
@@ -53,8 +77,10 @@ public class Curso implements Serializable {
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.grupo = grupo;
+        this.alumnos = new ArrayList<>();
     }
 
     public Curso() {
+        alumnos = new ArrayList<>();
     }
 }

@@ -1104,33 +1104,124 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <column id="300" parent="299" name="id">
+    <table id="300" parent="288" name="cursos">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="301" parent="288" name="equipo">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <column id="302" parent="299" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="301" parent="299" name="nombre">
+    <column id="303" parent="299" name="nombre">
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="302" parent="299" name="apellidos">
+    <column id="304" parent="299" name="apellidos">
       <DataType>varchar(250)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="303" parent="299" name="dni">
+    <column id="305" parent="299" name="dni">
       <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <index id="304" parent="299" name="PRIMARY">
+    <column id="306" parent="299" name="id_curso">
+      <DataType>int|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="307" parent="299" name="id_equipo">
+      <DataType>int|0s</DataType>
+      <Position>6</Position>
+    </column>
+    <foreign-key id="308" parent="299" name="alumnos_ibfk_1">
+      <ColNames>id_curso</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>cursos</RefTableName>
+    </foreign-key>
+    <foreign-key id="309" parent="299" name="alumnos_ibfk_2">
+      <ColNames>id_equipo</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>equipo</RefTableName>
+    </foreign-key>
+    <index id="310" parent="299" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="305" parent="299" name="PRIMARY">
+    <index id="311" parent="299" name="id_curso">
+      <ColNames>id_curso</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="312" parent="299" name="id_equipo">
+      <ColNames>id_equipo</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="313" parent="299" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="314" parent="300" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="315" parent="300" name="nombre">
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="316" parent="300" name="descripcion">
+      <DataType>varchar(500)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="317" parent="300" name="grupo">
+      <DataType>char(1)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <index id="318" parent="300" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="319" parent="300" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="320" parent="301" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="321" parent="301" name="marca">
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="322" parent="301" name="modelo">
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <index id="323" parent="301" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="324" parent="301" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>

@@ -12,7 +12,11 @@
         <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
         <property name="show_sql">true</property>
 
-<!--        <mapping resource="com/cieep/modelos/mapping/alumno.hbm.xml"/>  ESTO ES PARA LA PRIMERA FORMA DE HACER EL CRUD-->
-<mapping class="com.cieep.modelos.Alumno"/> <!--        ESTO ES PARA LA SEGUNDA FORMA DE HACER EL CRUD-->
+        <mapping resource="com/cieep/modelos/mapping/escuela.hbm.xml"/>  <!-- ESTO ES PARA LA PRIMERA FORMA DE HACER EL CRUD-->
+        <!--        <mapping class="com.cieep.modelos.Alumno"/> &lt;!&ndash;        ESTO ES PARA LA SEGUNDA FORMA DE HACER EL CRUD&ndash;&gt;-->
+        <!--        <mapping class="com.cieep.modelos.Equipo"/>-->
+        <!--        <mapping class="com.cieep.modelos.Curso"/>-->
+
+
     </session-factory>
 </hibernate-configuration>
